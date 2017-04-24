@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) MPMoviePlayerController *mpc;
 
 @end
 
@@ -16,13 +21,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.url = [NSURL URLWithString:@"http://61.155.167.13/data2/video09/2017/04/24/4596648-102-008-0716.mp4"];
 }
 
+- (IBAction)mpcClick:(id)sender {
+    self.mpc = [[MPMoviePlayerController alloc] initWithContentURL:self.url];
+    self.mpc.view.frame = CGRectMake(0, 200, 414, 200);
+    [self.view addSubview:self.mpc.view];
+    [self.mpc play];
+}
+
+- (IBAction)mpvcClick:(id)sender {
+    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:self.url];
+    [self presentMoviePlayerViewControllerAnimated:moviePlayer];
+}
+- (IBAction)avPlayerClick:(id)sender {
+    AVPlayer *player = [AVPlayer playerWithURL:self.url];
+    AVPlayerLayer *playLayer = [AVPlayerLayer playerLayerWithPlayer:player];
+    playLayer.frame = self.view.bounds;
+    [self.view.layer addSublayer:playLayer];
+    [player play];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 
