@@ -10,6 +10,8 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 
+#import "ERPlayer.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) NSURL *url;
@@ -36,12 +38,20 @@
     MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:self.url];
     [self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
+
 - (IBAction)avPlayerClick:(id)sender {
     AVPlayer *player = [AVPlayer playerWithURL:self.url];
     AVPlayerLayer *playLayer = [AVPlayerLayer playerLayerWithPlayer:player];
     playLayer.frame = self.view.bounds;
     [self.view.layer addSublayer:playLayer];
     [player play];
+}
+
+- (IBAction)erPlayerClick:(id)sender {
+    ERPlayer *erPlay = [[ERPlayer alloc] init];
+    [erPlay setViedoUrl:self.url];
+    erPlay.frame = self.view.bounds;
+    [self.view addSubview:erPlay];
 }
 
 - (void)didReceiveMemoryWarning {

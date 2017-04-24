@@ -14,6 +14,8 @@
 		81950E8D1EAD9BB800D051CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81950E8C1EAD9BB800D051CB /* Assets.xcassets */; };
 		81950E901EAD9BB800D051CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81950E8E1EAD9BB800D051CB /* LaunchScreen.storyboard */; };
 		81950E9B1EAD9BB800D051CB /* ______DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81950E9A1EAD9BB800D051CB /* ______DemoTests.m */; };
+		81950EA91EADB39B00D051CB /* ERPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 81950EA71EADB39B00D051CB /* ERPlayer.m */; };
+		81950EAA1EADB39B00D051CB /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81950EA81EADB39B00D051CB /* Resources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		81950E961EAD9BB800D051CB /* 视频播放器-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "视频播放器-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81950E9A1EAD9BB800D051CB /* ______DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______DemoTests.m"; sourceTree = "<group>"; };
 		81950E9C1EAD9BB800D051CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81950EA61EADB39B00D051CB /* ERPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERPlayer.h; sourceTree = "<group>"; };
+		81950EA71EADB39B00D051CB /* ERPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERPlayer.m; sourceTree = "<group>"; };
+		81950EA81EADB39B00D051CB /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		81950E7F1EAD9BB800D051CB /* 视频播放器-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				81950EA51EADB39B00D051CB /* Player */,
 				81950E831EAD9BB800D051CB /* AppDelegate.h */,
 				81950E841EAD9BB800D051CB /* AppDelegate.m */,
 				81950E861EAD9BB800D051CB /* ViewController.h */,
@@ -109,6 +115,16 @@
 				81950E9C1EAD9BB800D051CB /* Info.plist */,
 			);
 			path = "视频播放器-DemoTests";
+			sourceTree = "<group>";
+		};
+		81950EA51EADB39B00D051CB /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				81950EA61EADB39B00D051CB /* ERPlayer.h */,
+				81950EA71EADB39B00D051CB /* ERPlayer.m */,
+				81950EA81EADB39B00D051CB /* Resources.bundle */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +214,7 @@
 				81950E901EAD9BB800D051CB /* LaunchScreen.storyboard in Resources */,
 				81950E8D1EAD9BB800D051CB /* Assets.xcassets in Resources */,
 				81950E8B1EAD9BB800D051CB /* Main.storyboard in Resources */,
+				81950EAA1EADB39B00D051CB /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81950E881EAD9BB800D051CB /* ViewController.m in Sources */,
+				81950EA91EADB39B00D051CB /* ERPlayer.m in Sources */,
 				81950E851EAD9BB800D051CB /* AppDelegate.m in Sources */,
 				81950E821EAD9BB800D051CB /* main.m in Sources */,
 			);

@@ -45,6 +45,14 @@
                                     <action selector="avPlayerClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a60-J4-uyh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsl-ln-yQU">
+                                <rect key="frame" x="157" y="468" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ERPlayer"/>
+                                <connections>
+                                    <action selector="erPlayerClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nP-ce-LT8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
